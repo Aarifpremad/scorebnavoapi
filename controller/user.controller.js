@@ -30,7 +30,7 @@ const signUp = async (req, res) => {
         if (otpRecord.expireTime < new Date()) {
             return res.status(400).json({ message: 'OTP has expired' });
         }
-        
+        console.log("otp check ")
 
         await Model.OTP.updateOne({ _id: otpRecord._id }, { $set: { hitCount: 0 } });
         await Model.OTP.deleteOne({ _id: otpRecord._id });
