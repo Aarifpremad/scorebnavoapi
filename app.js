@@ -4,7 +4,6 @@ const fs = require('fs');
 
 let app = express();
 let config = require("./config")
-let index = require("./index")
 let port = config.port
 // let http = require("http")
 // let server = http.createServer()

@@ -2,7 +2,7 @@ const  mongoose = require("mongoose");
 
 let config = require("../config")
 console.log(config.db)
-mongoose.connect("mongodb://localhost:27017/scorebnavo").then(() => {
+mongoose.connect(config.db).then(() => {
     console.log('MongoDB connected successfully');
   })
   .catch((err) => {
